@@ -1,0 +1,124 @@
+@import "../assets/scss/Mixin";
+@import "../assets/scss/Variable";
+.Container {
+  position: relative;
+  height: auto;
+  width: 90%;
+  max-width: 400px;
+  background: $color-white-default;
+  box-shadow: $shadow-basic;
+  border-radius: $small-radius;
+  overflow: hidden;
+  padding: $size-1rem;
+  @include screen-sm {
+    width: $full-width;
+  }
+  .Header {
+    position: relative;
+    @include display-flex(row, center, center, 0);
+    width: $full-width;
+    margin-bottom: $size-1rem;
+    h3 {
+      font-size: $fs-medium-xl;
+      color: $color-gray-500;
+      font-weight: $fw-bold;
+    }
+  }
+  .Form {
+    position: relative;
+    @include display-flex(column, space-between, center, $size-05rem);
+    width: $full-width;
+    .Label__Wrapper {
+      @include display-flex(row, space-between, center, $size-08rem);
+      i {
+        margin-top: $size-1_5rem;
+        font-size: $fs-small-xl;
+        color: $color-gray-500;
+      }
+    }
+    label {
+      position: relative;
+      @include display-flex(column, center, flex-start, $size-03rem);
+      width: $full-width;
+      span {
+        font-size: $fs-small;
+        color: $color-gray-500;
+        font-weight: $fw-medium;
+      }
+      input {
+        font-size: $fs-small-xl;
+        color: $color-gray-600;
+        height: 45px;
+        width: $full-width;
+        border: 0;
+        outline: $size-01rem solid $color-gray-400;
+        background: $color-transparent-default;
+        border-radius: $small-radius;
+        padding: $size-08rem;
+        &:focus {
+          outline: 0.15rem solid $color-primary;
+        }
+        &.File__Input {
+          @include display-flex(row, space-between, center, 0);
+        }
+        &.disabled {
+          pointer-events: none;
+        }
+      }
+    }
+    .Dropdown__List__Wrapper {
+      @include display-flex(row, space-between, center, $size-1rem);
+      width: $full-width;
+      margin-bottom: $size-1rem;
+      .Dwopdown__Wrapper {
+        @include display-flex(column, space-between, flex-start, $size-03rem);
+        width: $full-width;
+        span {
+          font-size: $fs-small;
+          color: $color-gray-500;
+          font-weight: $fw-medium;
+        }
+        .Select__Box {
+          @include display-flex(row, space-between, center, $size-05rem);
+          font-size: $fs-small-xl;
+          color: $color-gray-600;
+          height: 45px;
+          width: $full-width;
+          border: 0;
+          outline: $size-01rem solid $color-gray-400;
+          border-radius: $small-radius;
+          padding: 0 $size-08rem;
+          padding-right: 0;
+          img {
+            max-width: 30px;
+          }
+          select {
+            border: none;
+            outline: none;
+            width: $full-width;
+            background: $color-transparent-default;
+            font-size: $fs-small-xl;
+            color: $color-gray-600;
+            font-weight: $fw-medium;
+            height: 45px;
+            cursor: pointer;
+          }
+        }
+      }
+      .Button-Exchange {
+        margin-top: $size-1_5rem;
+        max-width: 45px;
+        transform: rotateY(0deg);
+        transform-origin: center;
+        &.rotate i {
+          transform: rotateY(180deg);
+        }
+      }
+    }
+    button {
+      @include primary-button( $full-width, 45px, (0 0), ($size-02rem $size-08rem), $small-radius, $fs-small, $fw-medium, $color-white-default, $color-primary);
+      margin-top: $size-1rem;
+      box-shadow: $shadow-basic;
+    }
+  }
+}

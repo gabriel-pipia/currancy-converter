@@ -1,0 +1,11 @@
+@import "./assets/scss/Mixin";
+@import "./assets/scss/Variable";
+@import "./assets/scss/_Reset.scss";
+body {
+  background: $color-primary;
+  @include display-flex(row, center, center, 0);
+  app-root {
+    width: $full-width;
+    @include display-flex(row, center, center, 0);
+  }
+}

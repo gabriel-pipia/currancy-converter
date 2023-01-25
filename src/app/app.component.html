@@ -1,0 +1,43 @@
+<div class="Container">
+  <header class="Header">
+    <h3>Currency Converter</h3>
+  </header>
+  <form class="Form">
+    <div class="Dropdown__List__Wrapper">
+      <div class="From Dwopdown__Wrapper">
+        <span>From</span>
+        <div class="Select__Box">
+          <img src="https://flagsapi.com/US/shiny/32.png" alt="flag" />
+          <select class="Select" SelectFrom #SelectFrom (change)="LoadFlag($event)"></select>
+        </div>
+      </div>
+      <button type="button" class="Button-Exchange" (click)="Replace()">
+        <i class="fa fa-exchange-alt"></i>
+      </button>
+      <div class="To Dwopdown__Wrapper">
+        <span>To</span>
+        <div class="Select__Box">
+          <img src="https://flagsapi.com/GE/shiny/32.png" alt="flag" />
+          <select class="Select" SelectTo #SelectTo (change)="LoadFlag($event)"></select>
+        </div>
+      </div>
+    </div>
+    <div class="Label__Wrapper">
+      <label for="Input__Amount">
+        <span>Enter Amount</span>
+        <input type="number" value="1" #InputAmount id="Input__Amount" />
+      </label>
+      <i class="fa fa-equals"></i>
+      <label for="Input__Amount">
+        <span>Exchange Rate</span>
+        <input
+          type="text"
+          #ExchangeOutput
+          id="Input__Amount"
+          class="disabled"
+        />
+      </label>
+    </div>
+    <button type="button" (click)="Exchange()">Exchange Now</button>
+  </form>
+</div>
