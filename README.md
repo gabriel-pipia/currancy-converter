@@ -1,6 +1,6 @@
 # Currancy converter
 
-Preview [currancy-converter-itstep.netlify.app](https://currancy-converter-itstep.netlify.app)
+Preview [gp-currancy-converter.netlify.app](https://gp-currancy-converter.netlify.app)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.3.
 
